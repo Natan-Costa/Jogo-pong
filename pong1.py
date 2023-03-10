@@ -2,7 +2,6 @@
 
 import turtle # Essa foi a biblioteca utilizada para desenvolver o jogo
 
-
 wn = turtle.Screen() # Essa função chama a tela por meio de uma janela
 wn.title("Pong by Natan Costa") #Título 
 wn.bgcolor("black") # Cor de fundo da tela
@@ -90,11 +89,11 @@ while True:
     ball.sety(ball.ycor() + ball.dy)
     
     # Delimitando a borda
-    if ball.ycor() > 290:
+    if ball.ycor() > 290: # Função que define a margem da página
         ball.sety(290)
         ball.dy *=-1
     
-    if ball.ycor() < -290:
+    if ball.ycor() < -290: 
         ball.sety(-290)
         ball.dy *=-1
    
@@ -103,7 +102,7 @@ while True:
         ball.dx *=-1
         score_a += 1
         pen.clear()
-        pen.write(f"Jogador A: {score_a} Jogador B: {score_b}", align='center', font=("Impact", 24, "normal"))
+        pen.write(f"Jogador A: {score_a} Jogador B: {score_b}", align='center', font=("Impact", 24, "normal")) # Função que atualiza o placar
 
     
     if ball.xcor() < -390:
@@ -115,7 +114,7 @@ while True:
 
     
 # Batendo a Raquete na bola
-    if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() -50 ):
+    if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() -50 ): # Função que rebate a bola
         ball.setx(340)
         ball.dx *= -1
     
