@@ -1,7 +1,7 @@
 #Jogo pong elaborado Por Natan Costa como projeto de curso da freecodecamp
 
 import turtle # Essa foi a biblioteca utilizada para desenvolver o jogo
-import os
+
 
 wn = turtle.Screen() # Essa função chama a tela por meio de uma janela
 wn.title("Pong by Natan Costa") #Título 
